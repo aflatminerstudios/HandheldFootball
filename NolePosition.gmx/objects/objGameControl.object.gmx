@@ -751,7 +751,7 @@ if (global.numTicks % totalTicksToFinishLevel == 0) {
       }
     
       // If not on last level, advance level
-      if (level &lt; 12) {  
+      if (level &gt; 0) {  
         level++;
         lives = 4;
         with (objGoalPost) {

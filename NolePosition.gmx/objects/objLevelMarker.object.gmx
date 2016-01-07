@@ -32,9 +32,15 @@ which = instance_number(objLevelMarker);
 
 image_speed = 0;
 
-if (which &lt; global.level) {
+var l = global.level % 12;
+
+if (l == 0) {
+  l = 12;
+}
+
+if (which &lt; l) {
   sprite_index = sprGameWon;
-} else if (which == global.level) {
+} else if (which == l) {
   sprite_index = sprCurrentGame;
 }
 
